@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title> Valentine?</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="card">
+    <h1>Will you be my Valentine? </h1>
+    <p>(You know the answer)</p>
+
+    <div class="btns">
+      <button class="primary" id="yesBtn">Yes</button>
+      <button class="secondary" id="noBtn">No</button>
+    </div>
+
+    <div class="notice" id="msg"></div>
+  </div>
+
+  <script>
+    const msg = document.getElementById("msg");
+
+    document.getElementById("yesBtn").onclick = () => {
+      window.location.href = "gifts.html";
+    };
+
+    document.getElementById("noBtn").onclick = () => {
+      msg.textContent = "Try again...";
+      setTimeout(() => msg.textContent = "", 900);
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title> Membership</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="card">
+    <h1>Membership Updated </h1>
+    <p>There is no cancellation </p>
+    <p>Do you wanna update membership?</p>
+
+    <div class="btns">
+      <button class="primary" id="yesBtn">Yes</button>
+      <button class="secondary" id="noBtn">No</button>
+    </div>
+
+    <div class="notice" id="msg"></div>
+
+    <div class="btns" style="margin-top:18px;">
+      <a class="button light" href="gifts.html">Back to gifts</a>
+    </div>
+  </div>
+
+  <script>
+    const msg = document.getElementById("msg");
+
+    document.getElementById("yesBtn").addEventListener("click", () => {
+      window.location.href = "love.html";
+    });
+
+    document.getElementById("noBtn").addEventListener("click", () => {
+      msg.textContent = "Try again ";
+      setTimeout(() => {
+        msg.textContent = "";
+        // go back to the question = stay here
+      }, 900);
+    });
+  </script>
+</body>
+</html>
